@@ -8,6 +8,8 @@ import FootballNews from './Pages/FootballNews.jsx'
 import BasketballNews from './Pages/BasketballNews.jsx'
 import FormulaNews from './Pages/FormulaNews.jsx'
 import UfcNews from './Pages/UfcNews.jsx'
+import Post from './Pages/Post.jsx'
+import Register from './Pages/Register.jsx'
 
 const router = createBrowserRouter([
     {
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
             {
                 path: '/ufc',
                 element: <UfcNews />
+            },
+            {
+                path: '/post',
+                element: <Post />
+            },
+            {
+                path: '/kayit-ol',
+                element: <Register />
             }
         ]
     }

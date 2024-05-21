@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 
 export default function App() {
 
     const location = useLocation();
     const [loading, setLoading] = useState(true);
+    const [openLoginBox, setOpenLoginBox] = useState(false);
 
     useEffect(() => {
         setLoading(true);
@@ -37,10 +38,48 @@ export default function App() {
     const currentMonth = turkishMonths[monthIndex];
     const currentDay = currentDate.getDate();
 
-    
+    const formRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (formRef.current && !formRef.current.contains(event.target)) {
+                setOpenLoginBox(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     return (
         <div className="full-page">
+
+            <div className="login-box" style={openLoginBox ? { top: '0' } : {}}>
+
+                <form ref={formRef}>
+
+                    <h1>GİRİŞ YAP</h1>
+
+                    <p>Hoşgeldiniz! Hesabınıza giriş yapın.</p>
+
+                    <div>
+                        <h3>Kullanıcı Adı veya E-posta*</h3>
+                        <input type="text" />
+                    </div>
+
+                    <div>
+                        <h3>Şifre*</h3>
+                        <input type="text" />
+                    </div>
+
+                    <button><i className="fa-solid fa-paper-plane"></i> Kayıt Ol</button>
+
+                </form>
+
+            </div>
 
             <header className="header">
 
@@ -60,9 +99,9 @@ export default function App() {
                         </div>
 
                         <div>
-                            <Link>Sign In</Link>
+                            <h6 onClick={() => setOpenLoginBox(true)}>Sign In</h6>
                             <span></span>
-                            <Link>Register</Link>
+                            <Link to={'/kayit-ol'}>Register</Link>
                         </div>
 
                     </div>
@@ -114,9 +153,8 @@ export default function App() {
                         <div className="loading"></div>
                     </div>    
                     :
-                    <Outlet>
-                    </Outlet>
-                }
+                    <Outlet />
+                    }
                 </div>
             </div>
 
@@ -170,5 +208,5 @@ export default function App() {
             </footer>
 
         </div>
-    )
+    );
 }

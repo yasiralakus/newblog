@@ -19,7 +19,7 @@ export default function UfcNews() {
                         <div className="blog-page-left-item">
                             <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2024-05/051824-hero-lerone-murphy_GettyImages-2153600801.jpg?h=d1cb525d&itok=lLGb0byz" alt="" />
                             <div>
-                                <Link>Barboza, Murphy'e karşı!</Link>
+                                <Link to={'/post'}>Barboza, Murphy'e karşı!</Link>
                                 <p>Bir çift ilk tur bitişi ve art arda üç duraklamayla tamamlanan ön elemelerin ardından, savaşçılar ana kartta ivme kazanmaya devam etti.</p>
                             </div>
                         </div>
@@ -27,7 +27,7 @@ export default function UfcNews() {
                         <div className="blog-page-left-item">
                             <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2022-06/061022-road-to-ufc-results-and-scorecards-hero.jpg?h=d1cb525d&itok=loL5zRFv" alt="" />
                             <div>
-                                <Link>UFC sonuçlarına ve puan kartlarına giden yol.</Link>
+                                <Link to={'/post'}>UFC sonuçlarına ve puan kartlarına giden yol.</Link>
                                 <p>Önümüzdeki hafta sonu, Asya'nın en yetenekli MMA adaylarından 40'ı, bir hayali gerçeğe dönüştürebilecek bir yolculuğa başlamak için Şangay UFC Performans Enstitüsü'nde Octagon'a adım atacak.</p>
                             </div>
                         </div>
@@ -35,7 +35,7 @@ export default function UfcNews() {
                         <div className="blog-page-left-item">
                             <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2024-05/052024-Michael-Chandler-HERO-GettyImages-1441078236.jpg?h=d1cb525d&itok=I0O5As0Q" alt="" />
                             <div>
-                                <Link>Michael Chandler asla tereddüt etmedi.</Link>
+                                <Link to={'/post'}>Michael Chandler asla tereddüt etmedi.</Link>
                                 <p>UFC Hafif Sıklet Yarışmacısı Michael Chandler Rotasında Kaldı ve 29 Haziran'da UFC 303'te Conor McGreogr'a Karşı Destansı Bir Zaferle Ödüllerini Almayı Planlıyor.</p>
                             </div>
                         </div>
@@ -59,17 +59,17 @@ export default function UfcNews() {
 
                     <div className="blog-page-right-item">
                         <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2024-05/052024-Michael-Chandler-HERO-GettyImages-1441078236.jpg?h=d1cb525d&itok=I0O5As0Q" alt="" />
-                        <Link>Michael Chandler asla tereddüt etmedi.</Link>
+                        <Link to={'/post'}>Michael Chandler asla tereddüt etmedi.</Link>
                     </div>
 
                     <div className="blog-page-right-item">
                         <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2022-06/061022-road-to-ufc-results-and-scorecards-hero.jpg?h=d1cb525d&itok=loL5zRFv" alt="" />
-                        <Link>UFC sonuçlarına ve puan kartlarına giden yol.</Link>
+                        <Link to={'/post'}>UFC sonuçlarına ve puan kartlarına giden yol.</Link>
                     </div>
 
                     <div className="blog-page-right-item">
                         <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2024-05/051824-hero-lerone-murphy_GettyImages-2153600801.jpg?h=d1cb525d&itok=lLGb0byz" alt="" />
-                        <Link>Barboza, Murphy'e karşı!</Link>
+                        <Link to={'/post'}>Barboza, Murphy'e karşı!</Link>
                     </div>
 
                 </div>

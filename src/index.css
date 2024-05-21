@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a { text-decoration: none; }
 
 li, summary { list-style: none;}
@@ -94,6 +98,72 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.login-box {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2;
+    top: -100vh;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > form {
+        width: 370px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+        background-color: #232323;
+        padding: 30px;
+        > h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #efefef;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #343434;
+            width: 100%;
+        }
+        > p {
+            font-size: 16px;
+            color: #565656;
+            font-weight: 400;
+        }
+        > div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            > h3 {
+                font-size: 16px;
+                color: #efefef;
+                font-weight: 700;
+            }
+            > input {
+                width: 100%;
+                padding: 15px;
+                border: 1px solid #343434;
+                background-color: transparent;
+                color: #efefef;
+                outline: none;
+            }
+        }
+        > button {
+            background-color: #f44336;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
 .header-top {
     padding: 13px 32px;
     background-color: #e43f32;
@@ -111,10 +181,18 @@ p, h1, h2, h3, h4, h5, h6 {
             font-size: 12px;
             color: #fff;
         }
-        > a {
+        > a, h6 {
             color: #fff;
             letter-spacing: 1px;
             font-size: 12px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        > h6:hover {
+            text-decoration: underline;
+        }
+        > a:hover {
+            text-decoration: underline;
         }
         > span {
             height: 14px;
@@ -453,10 +531,14 @@ p, h1, h2, h3, h4, h5, h6 {
         height: 235px;
         object-fit: cover;
     }
-    > h3 {
+    > a {
         font-size: 22px;
         font-weight: 600;
         color: #212121;
+        transition: all .3s;
+    }
+    > a:hover {
+        color: #f44336;
     }
     > p {
         font-size: 16px;
@@ -483,6 +565,11 @@ p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    > img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
     > a {
         font-size: 22px;
         color: #212121;
@@ -573,3 +660,309 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* HOME PAGE CSS END */
+
+/* POST PAGE CSS START */
+
+.post-page {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.post-page-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-page-left-top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    > h1 {
+        font-size: 34px;
+        color: #212121;
+        font-weight: 700;
+    }
+    > ul {
+        display: flex;
+        gap: 20px;
+        > li {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #777;
+            > p, i {
+                font-size: 14px;
+            }
+            > p {
+                font-weight: 400;
+                line-height: 1;
+                transition: all .3s;
+                cursor: pointer;
+            }
+            > p:hover {
+                color: #f44336;
+            }
+        }
+    }
+    > div {
+        display: flex;
+        > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            line-height: 1;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        > div:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.post-page-left-mid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    > p {
+        font-size: 17px;
+        color: #545454;
+        font-weight: 400;
+    }
+    > h3 {
+        font-size: 26px;
+        color: #212121;
+        font-weight: 700;
+    }
+}
+
+.advert-horizontal {
+    background-color: #f44336;
+    padding: 32px;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    > h3 {
+        line-height: 1;
+        color: #fff;
+        font-size: 24px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+}
+
+.post-page-left-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+    > h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #212121;
+        text-align: center;
+    }
+}
+
+.post-page-left-bottom-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    > img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    > a {
+        color: #212121;
+        font-size: 22px;
+        font-weight: 600;
+        transition: all .3s;
+    }
+    > a:hover {
+        color: #f44336;
+    }
+}
+
+.post-page-left-admin-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    border: 2px solid #f1f1f1;
+    > img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        > h3 {
+            color: #212121;
+            font-size: 14px;
+            font-weight: 700;
+            > span {
+                color: #f44336;
+            }
+        }
+        > p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #565656;
+        }
+        > div {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            > a {
+                color: #565656;
+                transition: all .3s;
+            }
+            > a:hover {
+                color: #f44336;
+            }
+        }
+    }
+}
+
+.post-page-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: 9px;
+    height: 945px;
+}
+
+.post-page-right-today-featured {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    > h1 {
+        font-size: 24px;
+        color: #212121;
+        font-weight: 700;
+        border-bottom: 1px solid #f1f1f1;
+        line-height: 1;
+        padding-bottom: 16px;
+    }
+}
+
+.post-page-right-today-featured-item {
+    display: flex;
+    gap: 16px;
+    > img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+    > a {
+        padding-top: 5px;
+        font-size: 16px;
+        color: #212121;
+        font-weight: 700;
+        transition: all .3s;
+    }
+    > a:hover {
+        color: #f44336;
+    }
+}
+
+/* POST PAGE CSS END */
+
+/* REGISTER PAGE CSS START */
+
+.register-page {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    > h1 {
+        font-size: 24px;
+        color: #212121;
+        font-weight: 800;
+        letter-spacing: 1px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    > p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #565656;
+    }
+    > button {
+        background-color: #f44336;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 30px;
+        border: none;
+        cursor: pointer;
+    }
+    > button:hover {
+        opacity: 0.8;
+    }
+}
+
+.col-2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.register-input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    > input {
+        width: 100%;
+        padding: 15px;
+        color: #212121;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: 1px solid #e1e1e1;
+    }
+    > h6 {
+        font-size: 16px;
+        font-weight: 800;
+        color: #212121;
+    }
+}
+
+/* REGISTER PAGE CSS END */
