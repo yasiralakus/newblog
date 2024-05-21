@@ -1,6 +1,20 @@
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 
 export default function App() {
+
+    const location = useLocation();
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setLoading(true);
+        
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 700);
+
+        return () => clearTimeout(timer);
+    }, [location.pathname]);
 
     const turkishMonths = [
         "Ocak",
@@ -95,9 +109,14 @@ export default function App() {
 
             <div className="main">
                 <div className="container">
+                    {loading === true ?
+                    <div className="loading-bg">
+                        <div className="loading"></div>
+                    </div>    
+                    :
                     <Outlet>
-
                     </Outlet>
+                }
                 </div>
             </div>
 

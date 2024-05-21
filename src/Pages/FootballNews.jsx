@@ -209,18 +209,18 @@ export default function FootballNews() {
                 <div>
 
                     <div className="blog-page-right-item">
-                        <img src="https://nunforest.com/politics-demo/upload/blog/th1.jpg" alt="" />
-                        <Link>Commentary: Spotify’s Unusual IPO Came at the Perfect Time</Link>
+                        <img src="https://assets.goal.com/images/v3/blt51ce8d8ed3c49261/GOAL%20-%20Blank%20WEB%20-%20Facebook%20(30).jpg?auto=webp&format=pjpg&width=1080&quality=60" alt="" />
+                        <Link>Liverpool'da Jürgen Klopp'un yerini alan isim belli oldu.</Link>
                     </div>
 
                     <div className="blog-page-right-item">
-                        <img src="https://nunforest.com/politics-demo/upload/blog/th2.jpg" alt="" />
-                        <Link>5 Key Things to Know About Haiti After Donald Trump's Insult</Link>
+                        <img src="https://assets.goal.com/images/v3/blt0cf05e5cd2044202/Ads%C4%B1z%20tasar%C4%B1m%20(3).jpg?auto=webp&format=pjpg&width=1080&quality=60" alt="" />
+                        <Link>Galatasaray - Fenerbahçe derbisini izlemek için servet ödediler.</Link>
                     </div>
 
                     <div className="blog-page-right-item">
-                        <img src="https://nunforest.com/politics-demo/upload/blog/th4.jpg" alt="" />
-                        <Link>These Are All the Sam's Club Locations That Are Closing</Link>
+                        <img src="https://assets.goal.com/images/v3/bltd3d271b27bef44b2/mou(2).jpg?auto=webp&format=pjpg&width=1080&quality=60" alt="" />
+                        <Link>Jose Mourinho'nun Beşiktaş'tan istediği ücret ortaya çıktı!</Link>
                     </div>
 
                 </div>

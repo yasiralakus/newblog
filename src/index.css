@@ -39,6 +39,43 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* hazır kodlarım */
 
+.loading-bg {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.loading {
+    width: 100px;
+    height: 100px;
+    border: 8px dashed #f44336;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 8px dashed transparent;
+    animation: loading 1s infinite linear;
+}
+
+.loadingSmall {
+    width: 30px;
+    height: 30px;
+    border: 4px solid #222831;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid transparent;
+    animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -245,13 +282,14 @@ p, h1, h2, h3, h4, h5, h6 {
 .blog-page-left-item {
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
     > img {
         width: 250px;
         height: 150px;
         object-fit: cover;
     }
     > div {
+        width: calc(100% - 265px);
         display: flex;
         flex-direction: column;
         gap: 6px;
@@ -383,14 +421,14 @@ p, h1, h2, h3, h4, h5, h6 {
         width: 100%;
         height: 350px;
         object-fit: cover;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     > h3 {
         font-size: 30px;
         font-weight: 700;
         color: #212121;
         text-transform: uppercase;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     > p {
         font-size: 16px;
