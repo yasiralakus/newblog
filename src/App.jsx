@@ -5,10 +5,12 @@ export default function App() {
 
     const location = useLocation();
     const [loading, setLoading] = useState(true);
+    const [openMobileMenu, setOpenMobileMenu] = useState(false);
     const [openLoginBox, setOpenLoginBox] = useState(false);
 
     useEffect(() => {
         setLoading(true);
+        setOpenMobileMenu(false)
         
         const timer = setTimeout(() => {
             setLoading(false);
@@ -115,6 +117,42 @@ export default function App() {
                     <div className="header-bottom">
 
                         <ul>
+                            <li>
+                                <NavLink to={'/'}>Anasayfa</NavLink>
+                            </li>
+                            <span></span>
+                            <li>
+                                <NavLink to={'/futbol'}>Futbol</NavLink>
+                            </li>
+                            <span></span>
+                            <li>
+                                <NavLink to={'/basketbol'}>Basketbol</NavLink>
+                            </li>
+                            <span></span>
+                            <li>
+                                <NavLink to={'/formula1'}>Formula 1</NavLink>
+                            </li>
+                            <span></span>
+                            <li>
+                                <NavLink to={'/ufc'}>UFC</NavLink>
+                            </li>
+                            <span></span>
+                            <li>
+                                <NavLink to={'/ekibe-katil'}>Ekibe Katıl</NavLink>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div className="header-bottom-mobile">
+
+                        <button onClick={() => (openMobileMenu ? setOpenMobileMenu(false) : setOpenMobileMenu(true))}>
+                            <span style={openMobileMenu ? {transform: 'rotate(45deg) translateX(6px) translateY(5px)', backgroundColor: '#f44336'} : {}}></span>
+                            <span style={openMobileMenu ? {opacity: '0'} : {}}></span>
+                            <span style={openMobileMenu ? {transform: 'rotate(135deg) translateX(-5px) translateY(4px)', backgroundColor: '#f44336'} : {}}></span>
+                        </button>
+
+                        <ul style={openMobileMenu ? {display: 'block'} : {}}>
                             <li>
                                 <NavLink to={'/'}>Anasayfa</NavLink>
                             </li>
