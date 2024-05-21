@@ -13,8 +13,25 @@ export default function LatestNews() {
         slidesPerView={3}
         spaceBetween={30}
         loop={true}
+        breakpoints={{
+            1220: {
+                slidesPerView: 3,
+            },
+            1000: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            500: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            },
+          }}
         autoplay={{
-            delay: 1500,
+            delay: 2000,
             disableOnInteraction: false,
         }}
         modules={[Autoplay]}

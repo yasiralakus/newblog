@@ -95,7 +95,7 @@ export default function Home() {
 
                 <div className="advert-little">
                     <h3>Reklam Alanı</h3>
-                    <h3>375x600</h3>
+                    <h3>375x450</h3>
                 </div>
 
 

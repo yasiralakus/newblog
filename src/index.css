@@ -490,10 +490,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .home-page-left {
     width: 100% !important;
+    overflow: hidden;
 }
 
 .home-page-left-big-news {
-    width: 752px !important;
+    width: 100% !important;
     overflow: hidden;
     padding-bottom: 30px;
     border-bottom: 1px solid #f1f1f1;
@@ -570,7 +571,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .home-page-left-latest-news {
-    width: 752px !important;
+    width: 100% !important;
+    overflow: hidden;
     > h1 {
         font-size: 24px;
         font-weight: 700;
@@ -1214,3 +1216,204 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* ABOUT PAGE CSS END */
+/* 
+@media (width < 1217px) {
+
+    .container {
+        width: 100% !important;
+    }
+
+    .main {
+        > .container {
+            padding: 20px;
+        }
+    }
+    
+    .home-page-left-big-news {
+        padding-bottom: 15px;
+    }
+
+    .home-page-right {
+        position: relative;
+        height: auto;
+    }
+
+    .home-page-left-little-news {
+        gap: 20px;
+    }
+    
+}
+
+@media (width < 990px) {
+
+    .home-page {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page-left-latest-news-item {
+        > img {
+            width: 100% !important;
+        }
+    }
+    
+}
+
+@media (width < 650px) {
+
+    .header-bottom {
+        > ul {
+            display: none;
+        }
+    }
+
+    .footer-top {
+        padding: 30px;
+        > p {
+            width: 100%;
+        }
+    }
+
+} */
+
+@media (width < 1220px ) {
+
+    .container {
+        box-shadow: none;
+    }
+
+    .header, .footer {
+        > .container {
+            width: 100%;
+        }
+    }
+
+    .main {
+        > .container {
+            padding: 20px;
+            width: 940px;
+        }
+    }
+
+    .home-page-left-big-news {
+        padding-bottom: 15px;
+    }
+
+    .home-page-left-little-news {
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    
+}
+
+@media (width < 990px ) {
+
+    .main {
+        > .container {
+            width: 690px;
+        }
+    }
+
+    .advert-little {
+        width: 375px;
+        align-self: center;
+    }
+
+    .home-page {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page-left-latest-news-item {
+        > img {
+            height: 350px;
+        }
+    }
+    
+}
+
+@media (width < 710px ) {
+
+    .main {
+        > .container {
+            width: 510px;
+        }
+    }
+
+    .footer-top {
+        padding: 32px;
+        > p {
+            width: auto;
+        }
+    }
+
+    .header-bottom {
+        > ul {
+            display: none;
+        }
+    }
+
+    .home-page-left-big-news-item {
+        > img {
+            height: 250px;
+        }
+    }
+
+    .home-page-left-latest-news-item {
+        > img {
+            height: 250px;
+        }
+    }
+
+    .home-page-left-little-news-item {
+        > img {
+            height: 150px;
+        }
+    }
+
+    
+
+    #category {
+        top: 120px;
+    }
+    
+}
+
+@media (width < 530px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .main {
+        > .container {
+            padding: 20px;
+            width: 100%;
+        }
+    }
+
+
+    .home-page-left-little-news {
+        grid-template-columns: 1fr;
+    }
+
+    .advert {
+        width: auto;
+    }
+
+    .home-page-left-little-news-item {
+        > img {
+            height: 250px;
+        }
+    }
+
+    .home-page-left-latest-news-item {
+        > img {
+            height: 250px;
+        }
+    }
+
+    #category {
+        top: 220px;
+    }
+    
+}
