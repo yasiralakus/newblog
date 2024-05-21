@@ -75,7 +75,7 @@ export default function App() {
                         <input type="text" />
                     </div>
 
-                    <button><i className="fa-solid fa-paper-plane"></i> Kayıt Ol</button>
+                    <button><i className="fa-solid fa-paper-plane"></i> Giriş Yap</button>
 
                 </form>
 
@@ -95,13 +95,13 @@ export default function App() {
 
                             <span></span>
 
-                            <Link>Contact Us</Link>
+                            <Link to={'/iletisim'}>İletişim</Link>
                         </div>
 
                         <div>
-                            <h6 onClick={() => setOpenLoginBox(true)}>Sign In</h6>
+                            <h6 onClick={() => setOpenLoginBox(true)}>Giriş Yap</h6>
                             <span></span>
-                            <Link to={'/kayit-ol'}>Register</Link>
+                            <Link to={'/kayit-ol'}>Kayıt Ol</Link>
                         </div>
 
                     </div>
@@ -136,7 +136,7 @@ export default function App() {
                             </li>
                             <span></span>
                             <li>
-                                <NavLink to={'/a'}>Ekibe Katıl</NavLink>
+                                <NavLink to={'/ekibe-katil'}>Ekibe Katıl</NavLink>
                             </li>
                         </ul>
 
@@ -191,9 +191,9 @@ export default function App() {
                     <div className="footer-bottom">
 
                         <div>
-                            <Link>HOME</Link>
-                            <Link>ABOUT US</Link>
-                            <Link>CONTACT</Link>
+                            <Link to={'/'}>Anasayfa</Link>
+                            <Link to={'/hakkimizda'}>Hakkımızda</Link>
+                            <Link to={'/iletisim'}>İletişim</Link>
                         </div>
 
                         <div>

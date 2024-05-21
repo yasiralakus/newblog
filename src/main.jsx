@@ -10,11 +10,15 @@ import FormulaNews from './Pages/FormulaNews.jsx'
 import UfcNews from './Pages/UfcNews.jsx'
 import Post from './Pages/Post.jsx'
 import Register from './Pages/Register.jsx'
+import Contact from './Pages/Contact.jsx'
+import About from './Pages/About.jsx'
+import JoinTeam from './Pages/JoinTeam.jsx'
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
+        errorElement: 'yok',
         children: [
             {
                 index: true,
@@ -43,6 +47,18 @@ const router = createBrowserRouter([
             {
                 path: '/kayit-ol',
                 element: <Register />
+            },
+            {
+                path: '/iletisim',
+                element: <Contact />
+            },
+            {
+                path: '/hakkimizda',
+                element: <About />
+            },
+            {
+                path: '/ekibe-katil',
+                element: <JoinTeam />
             }
         ]
     }

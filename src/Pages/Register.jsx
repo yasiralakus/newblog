@@ -1,5 +1,10 @@
+import { useEffect } from "react";
+
 export default function Register() {
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
         <div className="register-page">

@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function UfcNews() {
 
     const [pageOrder, setPageOrder] = useState(1);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return(
         <div className="blog-page">
@@ -44,16 +48,16 @@ export default function UfcNews() {
                 }
 
                 <div className="blog-page-left-navigation">
-                    <button onClick={() => (pageOrder > 1 && setPageOrder(pageOrder - 1))}>Prew</button>
-                    <button style={pageOrder === 1 ? {backgroundColor: '#f44336', color: '#fff'} : {}} onClick={() => (setPageOrder(1))}>1</button>
-                    <button onClick={() => (pageOrder < 1 && setPageOrder(pageOrder + 1))}>Next</button>
+                    <button onClick={() => (pageOrder > 1 && setPageOrder(pageOrder - 1), window.scrollTo(0, 0))}>Prew</button>
+                    <button style={pageOrder === 1 ? {backgroundColor: '#f44336', color: '#fff'} : {}} onClick={() => (setPageOrder(1), window.scrollTo(0, 0))}>1</button>
+                    <button onClick={() => (pageOrder < 1 && setPageOrder(pageOrder + 1), window.scrollTo(0, 0))}>Next</button>
                 </div>
 
             </div>
 
             <div className="blog-page-right">
 
-                <h1>TODAY FEATURED</h1>
+                <h1>ÖNE ÇIKANLAR</h1>
 
                 <div>
 

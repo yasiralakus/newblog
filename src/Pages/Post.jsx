@@ -151,7 +151,7 @@ export default function Post() {
 
                 <div className="post-page-right-today-featured">
 
-                    <h1>TODAY FEATURED</h1>
+                    <h1>ÖNE ÇIKANLAR</h1>
 
                     <div>
                         <div className="post-page-right-today-featured-item">
