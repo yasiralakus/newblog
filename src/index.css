@@ -1280,6 +1280,15 @@ p, h1, h2, h3, h4, h5, h6 {
             width: 100%;
         }
     }
+
+    .post-page {
+       grid-template-columns: 1fr;
+    }
+
+    .advert-horizontal {
+        width: 750px;
+        margin: 0 auto;
+    }
     
 }
 
@@ -1321,6 +1330,16 @@ p, h1, h2, h3, h4, h5, h6 {
     .register-page-right {
         display: flex;
         justify-content: center;
+    }
+
+    .post-page-left-mid {
+        > img {
+            width: 100%;
+        }
+    }
+
+    .advert-horizontal {
+        width: 100%;
     }
     
 }
@@ -1433,6 +1452,25 @@ p, h1, h2, h3, h4, h5, h6 {
             height: 250px;
         }
     }
+
+    .post-page-left-top {
+        > div {
+            flex-direction: column;
+            gap: 4px;
+        }
+    }
+
+    .post-page-left-bottom {
+        > div {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .post-page-left-bottom-item {
+        > img {
+            height: 250px;
+        }
+    }
     
 }
 
@@ -1477,8 +1515,18 @@ p, h1, h2, h3, h4, h5, h6 {
         }
     }
 
+    .post-page-left-bottom-item {
+        > img {
+            height: 200px;
+        }
+    }
+
     #category {
         top: 170px;
+    }
+
+    .post-page-left-admin-details {
+        padding: 15px;
     }
     
 }
